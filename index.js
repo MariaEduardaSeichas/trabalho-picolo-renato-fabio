@@ -48,6 +48,10 @@ const usuario_ = await usuario.create({
   res.json(usuario_)
 })
 
+app.post('/produtos', async function(req, res){
+ const produtos = await produto.findAll();
+  res.json(produtos)
+})
 
 app.listen(4000, function() {
   console.log('App de Exemplo escutando na porta 3000!')
